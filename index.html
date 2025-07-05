@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jenkins Build Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .status-box {
+      display: inline-block;
+      background-color: #e6ffe6;
+      border: 2px solid #00b300;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #00b300;
+    }
+    .timestamp {
+      color: #555;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="status-box">
+    <h1>✅ Jenkins Build Successful</h1>
+    <p class="timestamp">Last updated: <span id="date"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("date").innerText = new Date().toLocaleString();
+  </script>
+</body>
+</html>
